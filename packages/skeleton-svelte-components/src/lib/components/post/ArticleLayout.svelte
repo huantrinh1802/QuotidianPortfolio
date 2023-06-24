@@ -4,7 +4,7 @@
   export let article: any;
 </script>
 
-<main class="mx-auto overflow-auto bg-white px-4 py-4 dark:bg-gray-900 lg:w-3/4 ">
+<main class="mx-auto overflow-auto bg-white px-4 py-4 dark:bg-gray-900 lg:w-3/4">
   <article class="format format-sm sm:format-base lg:format-lg format-blue dark:format-invert relative w-full rounded-md">
     <header
       class={`not-format mle-article-header h-1/4 min-h-[360px] md:min-h-[400px] md:rounded-md xl:min-h-[600px]`}

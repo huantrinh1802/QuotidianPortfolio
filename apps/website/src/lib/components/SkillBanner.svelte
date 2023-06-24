@@ -38,7 +38,7 @@
   on:mouseenter={animate}
   on:mouseleave={handleMouseMove}>
   <div
-    class="ks-skill-icon-wrapper relative flex h-full w-full grow items-center justify-center "
+    class="ks-skill-icon-wrapper relative flex h-full w-full grow items-center justify-center"
     class:rotated={direction}
     class:logo-only={logoOnly}>
     <div class="ks-banner-logo absolute flex h-full w-full grow items-center justify-center p-[20%]">
