@@ -47,7 +47,7 @@
         <div
           class={`item`}
           data-value={index}
-          in:fly={{
+          in:fly|global={{
             x: direction,
             easing: sineInOut,
           }}>
