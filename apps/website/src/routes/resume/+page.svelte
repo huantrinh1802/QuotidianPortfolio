@@ -9,8 +9,8 @@
   import { Accordion, AccordionItem } from '@skeletonlabs/skeleton';
   const contacts = [
     { href: 'mailto:huantrinh1802@gmail.com', icon: Email, text: 'huantrinh1802@gmail.com' },
-    { href: 'https://www.github.com/huantrinh1802', icon: GitHub, text: 'huantrinh1802' },
-    { href: 'https://www.linkedin.com/in/huantrinh1802', icon: LinkedIn, text: 'huantrinh1802' },
+    { href: 'https://www.github.com/huantrinh1802', icon: GitHub, text: 'gh/huantrinh1802' },
+    { href: 'https://www.linkedin.com/in/huantrinh1802', icon: LinkedIn, text: 'in/huantrinh1802' },
   ];
   const experiences = [
     {
@@ -62,23 +62,43 @@
   ];
   const educations = [
     {
-      title: 'Bachelor of Information Technology (Software Development)',
+      title: 'Bachelor of Information Technology (Software Development) - Macquarie University',
       timeline: '03/2015 - 06/2021',
-      location: 'Macquarie University, North Ryde NSW, Australia',
+      location: 'North Ryde NSW, Australia',
     },
     {
-      title: 'High School - HSC',
+      title: 'HSC - Fairvale High School',
       timeline: '09/2012 - 11/2014',
-      location: 'Fairvale High School, Fairfield NSW, Australia',
+      location: 'Fairfield NSW, Australia',
     },
   ];
-  const skills = [{ title: 'Python', percentage: 90 }];
+  const skills = [
+    { title: 'Python', percentage: 90 },
+    { title: 'JavaScript', percentage: 85 },
+    { title: 'SQL/PostgreSQL', percentage: 85 },
+    { title: 'SvelteJS/SvelteKit', percentage: 85 },
+    { title: 'VueJS', percentage: 80 },
+    { title: 'Docker', percentage: 75 },
+    { title: 'ReactJS', percentage: 70 },
+    { title: 'GraphQL', percentage: 70 },
+    { title: 'AWS', percentage: 70 },
+  ];
+  const languages = [
+    { title: 'Vietnamese', percentage: 95 },
+    { title: 'English', percentage: 85 },
+  ];
+  window.onbeforeprint = (event) => {
+    document.getElementById('page').scrollTo(0, 0);
+  };
 </script>
 
 <div class="flex p-2 print:hidden">
   <button
     class="btn variant-filled-primary ml-auto"
-    on:click={() => window.print()}>
+    on:click={() => {
+      document.getElementById('page').scrollTo(0, 0);
+      window.print();
+    }}>
     Print
   </button>
 </div>
@@ -89,8 +109,8 @@
       class="kcp-profile-photo z-10 flex h-60 w-60 flex-shrink-0 items-center justify-center rounded-full border-4 border-white bg-primary-700 p-8 print:h-40 print:w-40" />
     <div class="z-0 -mt-8 flex h-40 w-full items-center justify-center rounded-md bg-primary-700 print:-ml-10 print:mt-0 print:h-32 md:-ml-10 md:mt-0">
       <div>
-        <h1>Cong Anh Huan Trinh</h1>
-        <h2>Software Engineer</h2>
+        <h1 class="text-white print:!text-lg">Cong Anh Huan Trinh</h1>
+        <h2 class="text-white print:!text-base">Software Engineer</h2>
       </div>
     </div>
   </div>
@@ -101,7 +121,7 @@
         <svelte:fragment slot="content">
           {#each contacts as contact}
             <a
-              class="flex items-center gap-2 break-all !text-white print:!text-xs print:!text-teal-900"
+              class="flex items-center gap-2 break-all !text-primary-900-50-token print:!text-xs print:!text-teal-900"
               href={contact.href}>
               <svelte:component
                 this={contact.icon}
@@ -124,6 +144,18 @@
         </svelte:fragment>
       </AccordionItem>
     </Accordion>
+    <Accordion class="print:hidden">
+      <AccordionItem>
+        <svelte:fragment slot="summary">Languages</svelte:fragment>
+        <svelte:fragment slot="content">
+          {#each languages as language}
+            <ProgressBar
+              title={language.title}
+              percentage={language.percentage} />
+          {/each}
+        </svelte:fragment>
+      </AccordionItem>
+    </Accordion>
     <div class="hidden flex-col gap-4 rounded-md border border-slate-200 px-10 py-4 print:flex print:py-1 print:px-1">
       <h2 class="text-center print:!text-lg print:text-black">Contacts</h2>
       {#each contacts as contact}
@@ -138,7 +170,7 @@
       {/each}
       <div class="kcp-history" />
     </div>
-    <div class="hidden flex-col gap-4 rounded-md border border-slate-200 px-10 py-4 print:flex">
+    <div class="hidden flex-col gap-4 rounded-md border border-slate-200 px-10 print:px-2 py-4 print:flex">
       <h2 class="text-center print:!text-lg print:text-black">Skills</h2>
       <div>
         {#each skills as skill}
@@ -148,20 +180,30 @@
         {/each}
       </div>
     </div>
+    <div class="hidden flex-col gap-4 rounded-md border border-slate-200 px-10 print:px-2 py-4 print:flex">
+      <h2 class="text-center print:!text-lg print:text-black">Languages</h2>
+      <div>
+        {#each languages as language}
+          <ProgressBar
+            title={language.title}
+            percentage={language.percentage} />
+        {/each}
+      </div>
+    </div>
   </div>
   <div class="kcp-history flex flex-col justify-center gap-2 px-6 print:gap-1 print:px-0 print:text-black">
     <div class="flex flex-col">
       <h2 class="py-2 text-center print:!text-lg print:text-black">Experiences</h2>
       {#each experiences as content}
         <History {content} />
-        <hr class="my-8 h-px border-0 bg-gray-200 dark:bg-gray-700 print:my-0" />
+        <hr class="my-8 h-px border-0 bg-gray-200 dark:bg-gray-700 print:my-1" />
       {/each}
     </div>
     <div class="flex flex-col">
       <h2 class="py-2 text-center print:!text-lg print:text-black">Educations</h2>
       {#each educations as content}
         <History {content} />
-        <hr class="my-8 h-px border-0 bg-gray-200 dark:bg-gray-700 print:my-0" />
+        <hr class="my-8 h-px border-0 bg-gray-200 dark:bg-gray-700 print:my-1" />
       {/each}
     </div>
   </div>

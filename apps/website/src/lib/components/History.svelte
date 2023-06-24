@@ -12,10 +12,10 @@
     <div class="text-sm">{content.location}</div>
   </div>
   {#if content.summary}
-    <div class="py-2">{content.summary}</div>
+    <div class="py-2 print:text-xs">{content.summary}</div>
   {/if}
   {#if content.tasks}
-    <ul class="list !list-disc">
+    <ul class="list">
       {#each content.tasks as task}
         <li class="!whitespace-normal">
           <span>○</span>
