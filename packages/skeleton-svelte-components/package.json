@@ -29,7 +29,7 @@
     "svelte": "^3.54.0"
   },
   "devDependencies": {
-    "@histoire/plugin-svelte": "^0.15.9",
+    "@histoire/plugin-svelte": "^0.16.5",
     "@skeletonlabs/skeleton": "^1.8.0",
     "@sveltejs/adapter-auto": "^2.1.0",
     "@sveltejs/kit": "^1.20.5",
@@ -42,7 +42,7 @@
     "eslint": "^8.43.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-svelte": "^2.31.1",
-    "histoire": "^0.15.9",
+    "histoire": "^0.16.5",
     "postcss": "^8.4.24",
     "postcss-load-config": "^4.0.1",
     "prettier": "^2.8.8",

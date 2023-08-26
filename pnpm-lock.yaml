@@ -30,8 +30,8 @@ importers:
   apps/website:
     devDependencies:
       '@histoire/plugin-svelte':
-        specifier: ^0.15.9
-        version: 0.15.9(histoire@0.15.9)(svelte@4.0.0)(vite@4.3.9)
+        specifier: ^0.16.5
+        version: 0.16.5(histoire@0.16.5)(svelte@4.0.0)(vite@4.3.9)
       '@iconify/json':
         specifier: ^2.2.83
         version: 2.2.83
@@ -69,8 +69,8 @@ importers:
         specifier: ^2.31.1
         version: 2.31.1(eslint@8.43.0)(svelte@4.0.0)
       histoire:
-        specifier: ^0.15.9
-        version: 0.15.9(vite@4.3.9)
+        specifier: ^0.16.5
+        version: 0.16.5(vite@4.3.9)
       mdsvex:
         specifier: ^0.11.0
         version: 0.11.0(svelte@4.0.0)
@@ -139,8 +139,8 @@ importers:
         version: 3.4.1
     devDependencies:
       '@histoire/plugin-svelte':
-        specifier: ^0.15.9
-        version: 0.15.9(histoire@0.15.9)(svelte@4.0.0)(vite@4.3.9)
+        specifier: ^0.16.5
+        version: 0.16.5(histoire@0.16.5)(svelte@4.0.0)(vite@4.3.9)
       '@skeletonlabs/skeleton':
         specifier: ^1.8.0
         version: 1.8.0
@@ -178,8 +178,8 @@ importers:
         specifier: ^2.31.1
         version: 2.31.1(eslint@8.43.0)(svelte@4.0.0)
       histoire:
-        specifier: ^0.15.9
-        version: 0.15.9(vite@4.3.9)
+        specifier: ^0.16.5
+        version: 0.16.5(vite@4.3.9)
       postcss:
         specifier: ^8.4.24
         version: 8.4.24
@@ -248,12 +248,12 @@ packages:
     resolution: {integrity: sha512-qe8Nmh9rYI/HIspLSTwtbMFPj6dISG6+dJnOguTlPNXtCvS2uezdxscVBb7/3DrmNbQK49TDqpkSQ1chbRGdpQ==}
     dev: true
 
-  /@codemirror/commands@6.2.2:
-    resolution: {integrity: sha512-s9lPVW7TxXrI/7voZ+HmD/yiAlwAYn9PH5SUVSUhsxXHhv4yl5eZ3KLntSoTynfdgVYM0oIpccQEWRBQgmNZyw==}
+  /@codemirror/commands@6.2.4:
+    resolution: {integrity: sha512-42lmDqVH0ttfilLShReLXsDfASKLXzfyC36bzwcqzox9PlHulMcsUOfHXNo2X2aFMVNUoQ7j+d4q5bnfseYoOA==}
     dependencies:
-      '@codemirror/language': 6.6.0
-      '@codemirror/state': 6.2.0
-      '@codemirror/view': 6.9.2
+      '@codemirror/language': 6.9.0
+      '@codemirror/state': 6.2.1
+      '@codemirror/view': 6.16.0
       '@lezer/common': 1.0.2
     dev: true
 
@@ -275,11 +275,22 @@ packages:
       style-mod: 4.0.2
     dev: true
 
-  /@codemirror/lint@6.2.0:
-    resolution: {integrity: sha512-KVCECmR2fFeYBr1ZXDVue7x3q5PMI0PzcIbA+zKufnkniMBo1325t0h1jM85AKp8l3tj67LRxVpZfgDxEXlQkg==}
+  /@codemirror/language@6.9.0:
+    resolution: {integrity: sha512-nFu311/0ne/qGuGCL3oKuktBgzVOaxCHZPZv1tLSZkNjPYxxvkjSbzno3MlErG2tgw1Yw1yF8BxMCegeMXqpiw==}
     dependencies:
-      '@codemirror/state': 6.2.0
-      '@codemirror/view': 6.9.2
+      '@codemirror/state': 6.2.1
+      '@codemirror/view': 6.16.0
+      '@lezer/common': 1.0.2
+      '@lezer/highlight': 1.1.3
+      '@lezer/lr': 1.3.3
+      style-mod: 4.0.2
+    dev: true
+
+  /@codemirror/lint@6.4.0:
+    resolution: {integrity: sha512-6VZ44Ysh/Zn07xrGkdtNfmHCbGSHZzFBdzWi0pbd7chAQ/iUcpLGX99NYRZTa7Ugqg4kEHCqiHhcZnH0gLIgSg==}
+    dependencies:
+      '@codemirror/state': 6.2.1
+      '@codemirror/view': 6.16.0
       crelt: 1.0.5
     dev: true
 
@@ -287,13 +298,25 @@ packages:
     resolution: {integrity: sha512-69QXtcrsc3RYtOtd+GsvczJ319udtBf1PTrr2KbLWM/e2CXUPnh0Nz9AUo8WfhSQ7GeL8dPVNUmhQVgpmuaNGA==}
     dev: true
 
-  /@codemirror/theme-one-dark@6.1.1:
-    resolution: {integrity: sha512-+CfzmScfJuD6uDF5bHJkAjWTQ2QAAHxODCPxUEgcImDYcJLT+4l5vLnBHmDVv46kCC5uUJGMrBJct2Z6JbvqyQ==}
+  /@codemirror/state@6.2.1:
+    resolution: {integrity: sha512-RupHSZ8+OjNT38zU9fKH2sv+Dnlr8Eb8sl4NOnnqz95mCFTZUaiRP8Xv5MeeaG0px2b8Bnfe7YGwCV3nsBhbuw==}
+    dev: true
+
+  /@codemirror/theme-one-dark@6.1.2:
+    resolution: {integrity: sha512-F+sH0X16j/qFLMAfbciKTxVOwkdAS336b7AXTKOZhy8BR3eH/RelsnLgLFINrpST63mmN2OuwUt0W2ndUgYwUA==}
     dependencies:
-      '@codemirror/language': 6.6.0
-      '@codemirror/state': 6.2.0
-      '@codemirror/view': 6.9.2
+      '@codemirror/language': 6.9.0
+      '@codemirror/state': 6.2.1
+      '@codemirror/view': 6.16.0
       '@lezer/highlight': 1.1.3
+    dev: true
+
+  /@codemirror/view@6.16.0:
+    resolution: {integrity: sha512-1Z2HkvkC3KR/oEZVuW9Ivmp8TWLzGEd8T8TA04TTwPvqogfkHBdYSlflytDOqmkUxM2d1ywTg7X2dU5mC+SXvg==}
+    dependencies:
+      '@codemirror/state': 6.2.1
+      style-mod: 4.0.2
+      w3c-keyname: 2.2.6
     dev: true
 
   /@codemirror/view@6.9.2:
@@ -535,12 +558,12 @@ packages:
     resolution: {integrity: sha512-s2UHCoiXfxMvmfzqoN+vrQ84ahUSYde9qNO1MdxmoEhyHWsfmwOpFlwYV+ePJEVc7gFnATGUi376WowX1N7tFg==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  /@histoire/app@0.15.9(vite@4.3.9):
-    resolution: {integrity: sha512-fzL4BU2DWvhxhoGI2paa3oPxPiyswnB6EM0vt5GdNbKdMzpM113aEkGGaW7ki6zdDrYLx61l8hyvzjPk7E5Bgw==}
+  /@histoire/app@0.16.5(vite@4.3.9):
+    resolution: {integrity: sha512-m+rCZnz6lnaIbVK1R9UBZFgU91/V1RnZqVaMq6KjUuatuxUUS1M4HgsFT5Y74Utltq0U3i0RuIb5h20z6M7nHg==}
     dependencies:
-      '@histoire/controls': 0.15.9(vite@4.3.9)
-      '@histoire/shared': 0.15.8(vite@4.3.9)
-      '@histoire/vendors': 0.15.8
+      '@histoire/controls': 0.16.5(vite@4.3.9)
+      '@histoire/shared': 0.16.5(vite@4.3.9)
+      '@histoire/vendors': 0.16.5
       '@types/flexsearch': 0.7.3
       flexsearch: 0.7.21
       shiki-es: 0.2.0
@@ -548,33 +571,34 @@ packages:
       - vite
     dev: true
 
-  /@histoire/controls@0.15.9(vite@4.3.9):
-    resolution: {integrity: sha512-JnWHturlnnTzUNVY9vrXHTL0YmDhk4vbkMxpqEx2HSUm+WaoCmtUWE5zBkEUjeVQo7lZrGmWHDymf8CaNCjzyg==}
+  /@histoire/controls@0.16.5(vite@4.3.9):
+    resolution: {integrity: sha512-2Yng6fPbBOz9EMPb4arZfvnK4/SDoxA0jYaqjtuby/WDFXk/Lvp3je8xs8PbPAzXralDDSqCu02cfBQy4bUQqg==}
     dependencies:
-      '@codemirror/commands': 6.2.2
+      '@codemirror/commands': 6.2.4
       '@codemirror/lang-json': 6.0.1
-      '@codemirror/language': 6.6.0
-      '@codemirror/lint': 6.2.0
-      '@codemirror/state': 6.2.0
-      '@codemirror/theme-one-dark': 6.1.1
-      '@codemirror/view': 6.9.2
-      '@histoire/shared': 0.15.8(vite@4.3.9)
-      '@histoire/vendors': 0.15.8
+      '@codemirror/language': 6.9.0
+      '@codemirror/lint': 6.4.0
+      '@codemirror/state': 6.2.1
+      '@codemirror/theme-one-dark': 6.1.2
+      '@codemirror/view': 6.16.0
+      '@histoire/shared': 0.16.5(vite@4.3.9)
+      '@histoire/vendors': 0.16.5
     transitivePeerDependencies:
       - vite
     dev: true
 
-  /@histoire/plugin-svelte@0.15.9(histoire@0.15.9)(svelte@4.0.0)(vite@4.3.9):
-    resolution: {integrity: sha512-5j+82mCgHn77zt/WPb/OGtmD/zfLnm/4ulPPo0sdYnC0KF0joC0NcUr2fshfHFIyeZcWsfVHFN44N7rahyYJpg==}
+  /@histoire/plugin-svelte@0.16.5(histoire@0.16.5)(svelte@4.0.0)(vite@4.3.9):
+    resolution: {integrity: sha512-TEPCJw/SprSjiOiXK5hKvI1goidmuHU5qrOflZfcFikU50xqvnt0IqpwoHz4zXsUsxqlOySfvEqUASLaHjc2AA==}
     peerDependencies:
-      histoire: ^0.15.8
-      svelte: ^3.0.0
+      histoire: ^0.16.5
+      svelte: ^3.0.0 || ^4.0.0
     dependencies:
-      '@histoire/controls': 0.15.9(vite@4.3.9)
-      '@histoire/shared': 0.15.8(vite@4.3.9)
-      '@histoire/vendors': 0.15.8
+      '@histoire/controls': 0.16.5(vite@4.3.9)
+      '@histoire/shared': 0.16.5(vite@4.3.9)
+      '@histoire/vendors': 0.16.5
       change-case: 4.1.2
-      histoire: 0.15.9(vite@4.3.9)
+      globby: 13.2.2
+      histoire: 0.16.5(vite@4.3.9)
       launch-editor: 2.6.0
       pathe: 0.2.0
       svelte: 4.0.0
@@ -582,12 +606,12 @@ packages:
       - vite
     dev: true
 
-  /@histoire/shared@0.15.8(vite@4.3.9):
-    resolution: {integrity: sha512-pHtCUJy6Zr8IUtKIXv4LCU80xD+5nx+bhqef6nfdVFsZhMp2WbtqGkIThUk74P/NPQTFoJSFECn/HmBqdXZlrg==}
+  /@histoire/shared@0.16.5(vite@4.3.9):
+    resolution: {integrity: sha512-iLz/y5SiKERZGK4Ux2xXaYi89w2+ecyYTPHi62YitzfHMp7YXYi8Bk48T2NfU1HbZIi1NzbHoY8c4F6fiUG2Ag==}
     peerDependencies:
       vite: ^2.9.0 || ^3.0.0 || ^4.0.0
     dependencies:
-      '@histoire/vendors': 0.15.8
+      '@histoire/vendors': 0.16.5
       '@types/fs-extra': 9.0.13
       '@types/markdown-it': 12.2.3
       chokidar: 3.5.3
@@ -596,8 +620,8 @@ packages:
       vite: 4.3.9
     dev: true
 
-  /@histoire/vendors@0.15.8:
-    resolution: {integrity: sha512-RVvJmWlpRHa5dEdcAB+IB8OYKvw2Mv/tXF/Xu42SP2PwKkgQnTkDXmg+2HPMu9Uc+2i0u2cc9Lz+hqvkvS34kQ==}
+  /@histoire/vendors@0.16.5:
+    resolution: {integrity: sha512-25a90vugBz3KH3VzuddxuKeAjBQ1+osXQy2QICQO0kUXAtGHNj4u8T4iG5AgQD9CQXf6dc5+pnPoFZADHlW9VQ==}
     dev: true
 
   /@humanwhocodes/config-array@0.11.10:
@@ -1930,6 +1954,17 @@ packages:
       micromatch: 4.0.5
     dev: true
 
+  /fast-glob@3.3.1:
+    resolution: {integrity: sha512-kNFPyjhh5cKjrUltxs+wFx+ZkbRaxxmZ+X0ZU31SOsxCEtP9VPgtq2teZw1DebupL5GmDaNQ6yKMMVcM41iqDg==}
+    engines: {node: '>=8.6.0'}
+    dependencies:
+      '@nodelib/fs.stat': 2.0.5
+      '@nodelib/fs.walk': 1.2.8
+      glob-parent: 5.1.2
+      merge2: 1.4.1
+      micromatch: 4.0.5
+    dev: true
+
   /fast-json-stable-stringify@2.1.0:
     resolution: {integrity: sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==}
 
@@ -2103,12 +2138,12 @@ packages:
       slash: 3.0.0
     dev: true
 
-  /globby@13.2.0:
-    resolution: {integrity: sha512-jWsQfayf13NvqKUIL3Ta+CIqMnvlaIDFveWE/dpOZ9+3AMEJozsxDvKA02zync9UuvOM8rOXzsD5GqKP4OnWPQ==}
+  /globby@13.2.2:
+    resolution: {integrity: sha512-Y1zNGV+pzQdh7H39l9zgB4PJqjRNqydvdYCDG4HFXM4XuvSaQQlEc91IU1yALL8gUTDomgBAfz3XJdmUS+oo0w==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       dir-glob: 3.0.1
-      fast-glob: 3.2.12
+      fast-glob: 3.3.1
       ignore: 5.2.4
       merge2: 1.4.1
       slash: 4.0.0
@@ -2153,17 +2188,17 @@ packages:
       tslib: 2.6.0
     dev: true
 
-  /histoire@0.15.9(vite@4.3.9):
-    resolution: {integrity: sha512-Mb9185Sq/SckVhtHpUdf3dqSrAdf9HDsOFbTcBIZ6W9TYCdsSLY5kLzPU2sHaHHM/myxh5DC+9SLBaTFeNJSug==}
+  /histoire@0.16.5(vite@4.3.9):
+    resolution: {integrity: sha512-zrysBjiQjrwpPGTnPEQ+mYRa7yyls6shcRo8q0AIg49FW95egg1Atq3iwrjK+p09OJu7vWiX+hKEboePMDRAJA==}
     hasBin: true
     peerDependencies:
       vite: ^2.9.0 || ^3.0.0 || ^4.0.0
     dependencies:
       '@akryum/tinypool': 0.3.1
-      '@histoire/app': 0.15.9(vite@4.3.9)
-      '@histoire/controls': 0.15.9(vite@4.3.9)
-      '@histoire/shared': 0.15.8(vite@4.3.9)
-      '@histoire/vendors': 0.15.8
+      '@histoire/app': 0.16.5(vite@4.3.9)
+      '@histoire/controls': 0.16.5(vite@4.3.9)
+      '@histoire/shared': 0.16.5(vite@4.3.9)
+      '@histoire/vendors': 0.16.5
       '@types/flexsearch': 0.7.3
       '@types/markdown-it': 12.2.3
       birpc: 0.1.1
@@ -2174,9 +2209,9 @@ packages:
       diacritics: 1.3.0
       flexsearch: 0.7.21
       fs-extra: 10.1.0
-      globby: 13.2.0
+      globby: 13.2.2
       gray-matter: 4.0.3
-      jiti: 1.18.2
+      jiti: 1.19.3
       jsdom: 20.0.3
       markdown-it: 12.3.2
       markdown-it-anchor: 8.6.7(@types/markdown-it@12.2.3)(markdown-it@12.3.2)
@@ -2348,6 +2383,11 @@ packages:
 
   /jiti@1.18.2:
     resolution: {integrity: sha512-QAdOptna2NYiSSpv0O/BwoHBSmz4YhpzJHyi+fnMRTXFjp7B8i/YG5Z8IfusxB1ufjcD2Sre1F3R+nX3fvy7gg==}
+    hasBin: true
+    dev: true
+
+  /jiti@1.19.3:
+    resolution: {integrity: sha512-5eEbBDQT/jF1xg6l36P+mWGGoH9Spuy0PCdSr2dtWRDGC6ph/w9ZCL4lmESW8f8F7MwT3XKescfP0wnZWAKL9w==}
     hasBin: true
     dev: true
 
