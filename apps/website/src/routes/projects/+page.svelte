@@ -35,7 +35,7 @@
   // pull the store reference from the route props
 </script>
 
-<div class="grid grid-cols-3 gap-4 rounded-md p-2">
+<div class="grid grid-cols-1 gap-4 rounded-md p-2 sm:grid-cols-2 lg:grid-cols-3">
   {#each data.repositories as repo}
     <div class="card relative flex flex-col gap-4 rounded-md p-4">
       <div class="absolute right-0 top-0 flex h-10 w-full items-center justify-center rounded-t-md bg-primary-600">
@@ -45,7 +45,7 @@
       </div>
       <div class="mt-12">{repo.description}</div>
       <hr />
-      <div class="flex justify-center gap-4">
+      <div class="grid grid-cols-3 justify-center gap-4">
         {#if repo.repositoryTopics.nodes.length !== 0}
           {#each repo.repositoryTopics.nodes as node}
             <div class="rounded-md bg-slate-200 px-4 py-2 text-center">
@@ -56,7 +56,7 @@
       </div>
       <hr />
       <h2 class="text-center">Written in</h2>
-      <div class="flex justify-center gap-4">
+      <div class="grid grid-cols-3 justify-center gap-4">
         {#each repo.languages.nodes as language}
           <div
             class="language-wrapper rounded-md px-4 py-2 text-center"
