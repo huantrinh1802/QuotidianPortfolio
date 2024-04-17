@@ -170,7 +170,7 @@
       {/each}
       <div class="kcp-history" />
     </div>
-    <div class="hidden flex-col gap-4 rounded-md border border-slate-200 px-10 print:px-2 py-4 print:flex">
+    <div class="hidden flex-col gap-4 rounded-md border border-slate-200 px-10 py-4 print:flex print:px-2">
       <h2 class="text-center print:!text-lg print:text-black">Skills</h2>
       <div>
         {#each skills as skill}
@@ -180,7 +180,7 @@
         {/each}
       </div>
     </div>
-    <div class="hidden flex-col gap-4 rounded-md border border-slate-200 px-10 print:px-2 py-4 print:flex">
+    <div class="hidden flex-col gap-4 rounded-md border border-slate-200 px-10 py-4 print:flex print:px-2">
       <h2 class="text-center print:!text-lg print:text-black">Languages</h2>
       <div>
         {#each languages as language}

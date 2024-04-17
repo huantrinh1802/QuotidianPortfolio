@@ -70,12 +70,12 @@
   }
 </script>
 
-<div class="flex flex-col md:min-w-[224px] print:!min-w-fit">
-  <div class="mb-1 flex justify-between ">
+<div class="flex flex-col print:!min-w-fit md:min-w-[224px]">
+  <div class="mb-1 flex justify-between">
     <span class="text-base font-medium text-primary-900-50-token print:!text-primary-900">{title}</span>
     <!-- <span class="text-sm font-medium text-blue-700 dark:text-white">{percentage}%</span> -->
   </div>
-  <div class="h-2.5 w-full rounded-full bg-surface-800-100-token print:bg-gray-800 ">
+  <div class="h-2.5 w-full rounded-full bg-surface-800-100-token print:bg-gray-800">
     <div
       class={`h-2.5 rounded-full`}
       style={`width: ${percentage}%; background-color: ${getColor(percentage, false)}`} />
