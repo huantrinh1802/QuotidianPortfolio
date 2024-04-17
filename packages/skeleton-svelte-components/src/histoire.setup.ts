@@ -1,1 +1,1 @@
-import '@skeletonlabs/skeleton/styles/all.css';
+import './app.postcss'; // KEEP THIS!

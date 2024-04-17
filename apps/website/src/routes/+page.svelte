@@ -3,6 +3,7 @@
   import AboutMe from '$contents/about-me.md';
   import Skills from '$contents/skills.svx';
   import { base } from '$app/paths';
+  import SearchBar from '$lib/components/SearchBar.svelte';
   let helloName = 'World';
   const contents = [AboutMe, Skills];
   let typewriter;
@@ -16,6 +17,7 @@
   };
 </script>
 
+<SearchBar />
 <div class="h-[calc(100vh-var(--sk-header-height))] w-screen snap-y snap-mandatory overflow-y-auto px-10">
   <section class="ks-hero-section grid h-full snap-center snap-normal grid-cols-1 gap-10 md:grid-cols-2 md:gap-10">
     <div class="my-auto flex flex-col gap-4">

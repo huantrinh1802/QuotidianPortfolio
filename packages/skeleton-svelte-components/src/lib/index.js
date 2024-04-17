@@ -1,5 +1,4 @@
 // Reexport your entry components here
-import '@skeletonlabs/skeleton/styles/all.css';
 
 // Finally, your application's global stylesheet (sometimes labeled 'app.css')
 export { default as Breadcrumb } from './components/Breadcrumb.svelte';

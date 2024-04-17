@@ -1,5 +1,9 @@
-<div class="bg-teal-800">
-  <h1>Welcome to your library project</h1>
-  <p>Create your package using @sveltejs/package and preview/showcase your work with SvelteKit</p>
-  <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-</div>
+<script>
+  import SearchBar from '$lib/components/SearchBar.svelte';
+  const items = [
+    { type: 'list', name: 'Group 1', items: [{ type: 'item', name: 'Item 1.1', href: '' }] },
+    { type: 'list', name: 'Group 2', items: [{ type: 'list', name: 'Group 2.1', items: [{ type: 'item', name: 'Eagle' }] }] },
+  ];
+</script>
+
+<SearchBar {items} />

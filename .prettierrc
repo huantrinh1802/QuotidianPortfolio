@@ -5,7 +5,7 @@
   "printWidth": 200,
   "pluginSearchDirs": false,
   "arrowParens": "always",
-  "bracketSameLine": true,
+  "bracketSameLine": false,
   "bracketSpacing": true,
   "embeddedLanguageFormatting": "auto",
   "htmlWhitespaceSensitivity": "css",

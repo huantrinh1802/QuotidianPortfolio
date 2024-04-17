@@ -1,7 +1,14 @@
+import { join } from 'path';
+import { customTheme } from './theme';
+// 1. Import the Skeleton plugin
+import { skeleton } from '@skeletonlabs/tw-plugin';
 /** @type {import('tailwindcss').Config} */
 const config = {
   darkMode: 'class',
-  content: ['./src/**/*.{html,js,svelte,ts}', require('path').join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')],
+  content: ['./src/**/*.{html,js,svelte,md,svx,ts}', join(require.resolve(
+    '@skeletonlabs/skeleton'),
+    '../**/*.{html,js,svelte,ts}'
+  )],
   safelist: [
     {
       pattern: /grid-cols-(1|2|3|4)/,
@@ -18,7 +25,11 @@ const config = {
     },
   },
   // @ts-ignore
-  plugins: [require('@tailwindcss/container-queries'), require('@tailwindcss/typography'), ...require('@skeletonlabs/skeleton/tailwind/skeleton.cjs')()],
+  plugins: [require('@tailwindcss/container-queries'), require('@tailwindcss/typography'), skeleton({
+    themes: {
+      custom: [customTheme]
+    }
+  })],
 };
 
 export default config;

@@ -6,6 +6,9 @@
   import Header from '$lib/layout/Header.svelte';
   import { browser } from '$app/environment';
   import { base } from '$app/paths';
+  import { storePopup } from '@skeletonlabs/skeleton';
+  import { computePosition, autoUpdate, offset, shift, flip, arrow } from '@floating-ui/dom';
+  storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
   const callback = function (entries) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
